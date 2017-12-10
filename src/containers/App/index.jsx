@@ -1,8 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import logo from '../../assets/images/logo.svg';
+import tickets from './tickets.json';
 
 import TicketList from '../../components/TicketList';
-
-import tickets from './tickets.json';
 
 class App extends React.Component {
   state = {
@@ -11,11 +13,33 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <TicketList tickets={ this.state.tickets }/>
+      <div className={ this.props.className }>
+        <div className="header">
+          <img src={ logo } alt="Aviasales"/>
+        </div>
+        <div className="content">
+          <TicketList tickets={ this.state.tickets }/>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+export default styled(App)`
+  max-width: 800px;
+  margin: 100px auto;
+  
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+    
+    img {
+      vertical-align: top;
+    }
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+`;

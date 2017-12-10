@@ -1,0 +1,11 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  line-height: 1.5;
+  background: #f3f7fa;
+}
