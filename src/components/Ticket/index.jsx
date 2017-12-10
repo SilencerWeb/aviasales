@@ -22,7 +22,9 @@ function Ticket(props) {
   return (
     <div className={ props.className }>
       <div className="actions">
-        <img src={ logo } alt="Turkish Airlines"/>
+        <a href="#">
+          <img src={ logo } alt="Turkish Airlines"/>
+        </a>
         <Button>Купить за { props.ticket.price }р.</Button>
       </div>
       <div className="info">
@@ -113,13 +115,11 @@ export default styled(Ticket)`
   
   .time {
     font-size: 32px;
-    color: #4a4a4a;
     margin-bottom: 10px;
   }
   
   .place {
     font-size: 12px;
-    color: #4a4a4a;
   }
   
   .date {
